@@ -12,6 +12,9 @@ public class GoTbilisi extends ChromeRun {
     public void Firstpage(){
         $(byText("Welcome to Georgia")).waitUntil(Condition.visible, 3000);
         $(".cta__text").click();
+        String expetedResult = "Old City. New City.".toUpperCase();
+        Assert.assertEquals(expetedResult,$("h1").getText());
+
 
 
     }
